@@ -14,12 +14,23 @@ export function decrease() {
   }
 }
 
-export default function counter(state = 0, action) {
+
+const initState = {
+  value: 0,
+  proceessing: false
+}
+export default function counter(state = initState, action) {
   switch (action.type) {
   case 'INCREMENT':
-    return state + 1
+    return {
+    ...state,
+    value: ++state.value
+  }
   case 'DECREMENT':
-    return state - 1
+    return {
+    ...state,
+    value: --state.value
+  }
   default:
     return state
   }
