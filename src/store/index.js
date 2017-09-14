@@ -1,2 +1,2 @@
-import store from './createStore.js'
+import store from './store.js'
 export default store
