@@ -3,7 +3,7 @@ export const INCREMENT = 'INCREMENT'
 export const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
 export const DECREMENT = 'DECREMENT'
 
-export function increase() {
+export function increment() {
   return {
     type: INCREMENT
   }
@@ -15,7 +15,7 @@ export function incrementAsync() {
   }
 }
 
-export function decrease() {
+export function decrement() {
   return {
     type: DECREMENT
   }

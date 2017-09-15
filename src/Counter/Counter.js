@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
-import { increase, incrementAsync } from '../store/reducers/counter.js'
+import { increment, incrementAsync } from '../store/reducers/counter.js'
 
 class Counter extends Component {
 
@@ -17,7 +17,7 @@ class Counter extends Component {
         <button 
           type='button' 
           className='btn btn-outline-primary'
-          onClick={this.props.increase}
+          onClick={this.props.increment}
         >
           Add
         </button>
@@ -35,7 +35,7 @@ class Counter extends Component {
 
 export default connect(
   state => state.counter, {
-    increase,
+    increment,
     incrementAsync
   }
 )(Counter);
