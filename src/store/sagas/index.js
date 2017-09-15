@@ -1,5 +1,6 @@
-import { takeLatest } from 'redux-saga/effects'
-
-export default function* sagas() {
-  yield null
+import { watchIncrementAsync } from './counter.js'
+export default function* rootSaga() {
+  yield [
+    watchIncrementAsync()
+  ]
 }

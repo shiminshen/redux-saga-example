@@ -1,10 +1,17 @@
 
-const INCREMENT = 'INCREMENT'
-const DECREMENT = 'DECREMENT'
+export const INCREMENT = 'INCREMENT'
+export const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
+export const DECREMENT = 'DECREMENT'
 
 export function increase() {
   return {
     type: INCREMENT
+  }
+}
+
+export function incrementAsync() {
+  return {
+    type: INCREMENT_ASYNC
   }
 }
 
@@ -24,12 +31,12 @@ export default function counter(state = initState, action) {
   case 'INCREMENT':
     return {
     ...state,
-    value: ++state.value
+    value: state.value + 1
   }
   case 'DECREMENT':
     return {
     ...state,
-    value: --state.value
+    value: state.value - 1
   }
   default:
     return state

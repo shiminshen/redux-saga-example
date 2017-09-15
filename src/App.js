@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-
 import { Provider } from 'react-redux'
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 import store from './store'
+import Counter from './Counter'
+import './App.css';
 
 class App extends Component {
   render() {
@@ -16,6 +19,7 @@ class App extends Component {
           <p className="App-intro">
             This is a example for redux-saga
           </p>
+          <Counter/>
         </div>
       </Provider>
     );
