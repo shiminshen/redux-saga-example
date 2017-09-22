@@ -12,22 +12,25 @@ class Counter extends Component {
     } = this.props;
 
     return (
-      <div>
-        <h2>{value}</h2>
-        <button 
-          type='button' 
-          className='btn btn-outline-primary'
-          onClick={this.props.increment}
-        >
-          Add
-        </button>
-        <button 
-          type='button' 
-          className='btn btn-outline-primary ml-1'
-          onClick={this.props.incrementAsync}
-        >
-          Async Add (by saga)
-        </button>
+      <div className='container mt-5'>
+
+        <div className="row align-items-center justify-content-center">
+          <h1 className='col-12'>{value}</h1>
+          <button 
+            type='button' 
+            className='col-md-3 col-sm-12 btn-lg btn-outline-primary'
+            onClick={this.props.increment}
+          >
+            Add
+          </button>
+          <button 
+            type='button' 
+            className='col-md-3 col-sm-12 btn-lg btn-outline-primary ml-1'
+            onClick={this.props.incrementAsync}
+          >
+            Async Add (by saga)
+          </button>
+        </div>
       </div>
     );
   }
